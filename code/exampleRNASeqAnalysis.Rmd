@@ -10,7 +10,7 @@ It is easiest to follow along with this guide, if you set up a project folder th
 * trimmedReads
 * alignedReads
 * data
-* programs
+* code
 * quantitation
 
 
@@ -18,7 +18,7 @@ It is easiest to follow along with this guide, if you set up a project folder th
 ---------------
 
 ```
-/projectFolder/unzip.sh &
+/projectFolder/code/unzip.sh &
 ```
 
 2. Determine number of reads sent for each sample
@@ -183,7 +183,7 @@ hisat2-build ~/Documents/index/Rattus_norvegicus.Rnor_6.0.dna.toplevel.fa ~/Docu
 
 Third, align trimmed reads to genome.
 ```
-hisat2 --rna-strandness RF --dta -p 8 -x ~/Documents/index/rn6_hisat2 -1 ~/Documents/IntroToRNASeq/trimmedReads/WT_5_CGGCTATG_L003_R1_001_trimmed.fastq -2 ~/Documents/IntroToRNASeq/trimmedReads/WT_5_CGGCTATG_L003_R1_001_trimmed.fastq | samtools view -bS - > ~/Documents/IntroToRNASeq/alignedReads/WT5.bam 
+hisat2 --rna-strandness RF --dta -p 8 -x ~/Documents/index/rn6_hisat2 -1 ~/Documents/IntroToRNASeq/trimmedReads/WT_5_CGGCTATG_L003_R1_001_trimmed.fastq -2 ~/Documents/IntroToRNASeq/trimmedReads/WT_5_CGGCTATG_L003_R2_001_trimmed.fastq | samtools view -bS - > ~/Documents/IntroToRNASeq/alignedReads/WT5.bam 
 ```
 
 
