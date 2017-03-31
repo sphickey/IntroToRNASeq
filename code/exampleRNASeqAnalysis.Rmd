@@ -48,7 +48,7 @@ done
 You will have to change 'projectFolder' to the pathway to the project folder that you set up initially.  The '@GWZHISEQ' should be changed to the appropriate indicator for the header.  The core here on campus uses '@HISEQ', but it is worth checking the first few lines of one of you files to double check.
 
 ```
-/projectFolder/countRawReads.sh &
+~/Documents/IntroToRNASeq/code/countRawReads.tmp.sh
 ```
 
 The R code below reads in the txt file generated when counting reads per sample.  Much of it will have to be changed to get the data to look 'pretty' for your particular samples.
@@ -109,7 +109,7 @@ done
 
 Here is the code to do a single sample
 ```
-cutadapt -q 20 -m 20 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCACCCGTCCCGATCTCGTATGCCGTCTTCTGCTTG -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT -o /projectFolder/trimmedReads/WT_5_CGGCTATG_L003_R1_001_trimmed.fastq -p /projectFolder/trimmedReads/WT_5_CGGCTATG_L003_R2_001_trimmed.fastq /projectFolder/rawReads/WT_5_CGGCTATG_L003_R1_001.fastq /projectFolder/rawReads/WT_5_CGGCTATG_L003_R2_001.fastq
+cutadapt -q 20 -m 20 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCACCCGTCCCGATCTCGTATGCCGTCTTCTGCTTG -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT -o ~/Documents/IntroToRNASeq/trimmedReads/WT_5_CGGCTATG_L003_R1_001_trimmed.fastq -p ~/Documents/IntroToRNASeq/trimmedReads/WT_5_CGGCTATG_L003_R2_001_trimmed.fastq ~/Documents/IntroToRNASeq/rawReads/WT_5_CGGCTATG_L003_R1_001.fastq ~/Documents/IntroToRNASeq/rawReads/WT_5_CGGCTATG_L003_R2_001.fastq
 ```
 Again, you will have to put in the path to the raw data files.
 
